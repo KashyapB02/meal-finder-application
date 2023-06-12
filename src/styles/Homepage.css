@@ -1,0 +1,187 @@
+.app {
+    max-width: 120em;
+    padding-block: var(--padding-app-block);
+    padding-inline: var(--padding-app-inline);
+    text-align: center;
+}
+
+.app__headingSection {
+    display: grid;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.app__headingSection__heading {
+    font-size: var(--fs-3xl);
+}
+
+.app__headingSection__quote {
+    color: hsl(var(--color-text) / 0.9);
+}
+
+.app__headingSection__quote cite {
+    font-style: normal;
+    font-size: var(--fs-sm);
+}
+
+.app__searchMealForm {
+    max-width: 33.75rem;
+    margin-block: 3rem;
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    border-radius: 2em;
+    overflow: hidden;
+    border: 1px solid hsl(var(--color-theme));
+}
+
+.app__searchMealForm__searchInput {
+    width: 100%;
+    padding-inline: 1em;
+    color: hsl(var(--color-theme));
+}
+
+.app__searchMealForm__searchInput::placeholder {
+    font-size: var(--fs-sm);
+    color: hsl(var(--color-theme) / 0.8);
+}
+
+.app__searchMealForm__submitBtn {
+    aspect-ratio: 1;
+    height: 3rem;
+    font-size: var(--fs-2xl);
+    background: hsl(var(--color-theme));
+    color: hsl(var(--color-white));
+    transition: background 200ms linear;
+}
+
+.app__searchMealForm__submitBtn:hover {
+    background: hsl(var(--color-theme-dark));
+    transition: background 200ms linear;
+}
+
+.app__searchResultSection {
+    margin-block-start: 5rem;
+    margin-block-end: 2rem;
+    display: grid;
+    gap: 1.5rem;
+}
+
+.app__searchResultSection__sectionHeading {
+    font-size: var(--fs-2xl);
+}
+
+.app__searchResultSection__mealDisplayGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+}
+
+.app__searchResultSection__mealDisplayGrid__noResultContainer,
+.app__searchResultSection__mealDisplayGrid__initialBanner {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    height: 18rem;
+    border: 1px solid hsl(var(--color-theme) / 0.75);
+    border-radius: 0.6rem;
+}
+
+.app__searchResultSection__mealDisplayGrid__initialBanner {
+    height: max-content;
+    border: 0;
+    border-radius: 0;
+    pad: 1rem;
+}
+
+.app__searchResultSection__mealDisplayGrid__noResultContainer__noResultImg,
+.app__searchResultSection__mealDisplayGrid__initialBanner__bannerImg {
+    display: grid;
+    place-items: center;
+    aspect-ratio: 1;
+    width: 7rem;
+    margin-block-end: 1.5rem;
+    position: relative;
+}
+
+.app__searchResultSection__mealDisplayGrid__noResultContainer__noResultImg img,
+.app__searchResultSection__mealDisplayGrid__initialBanner__bannerImg img {
+    position: absolute;
+    object-position: top;
+}
+
+.app__searchResultSection__mealDisplayGrid__noResultContainer__mainMsg {
+    font-size: var(--fs-xl);
+    margin-block-end: 0.75rem;
+    color: hsl(var(--color-theme-dark));
+}
+
+.app__searchResultSection__mealDisplayGrid__initialBanner__mainMsg {
+    color: hsl(var(--color-text));
+    font-size: var(--fs-lg);
+}
+
+.app__searchResultSection__mealDisplayGrid__noResultContainer__subMsg {
+    color: hsl(var(--color-text) / 0.9);
+    max-width: 40ch;
+    font-size: calc((var(--fs-sm) + var(--fs-base)) / 2);
+}
+
+.app__searchResultSection__mealDisplayGrid__mealCard {
+    display: grid;
+    gap: 1.25rem;
+    overflow: hidden;
+    border-radius: 0.75rem;
+    background: hsl(var(--color-white));
+    padding-block-end: 1.5rem;
+    box-shadow: 0 4px 21px -12px hsl(var(--color-black) / 0.6);
+}
+
+.app__searchResultSection__mealDisplayGrid__mealCard__mealImg {
+    display: grid;
+    place-items: center;
+    position: relative;
+    aspect-ratio: 3/2;
+    overflow: hidden;
+}
+
+.app__searchResultSection__mealDisplayGrid__mealCard__mealImg img {
+    position: absolute;
+    object-position: top;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.4s ease 0s;
+}
+
+.app__searchResultSection__mealDisplayGrid__mealCard__mealImg:hover img {
+    transform: scale(1.1);
+    transition: transform 0.4s ease 0s;
+}
+
+.app__searchResultSection__mealDisplayGrid__mealCard__mealName {
+    font-size: var(--fs-base);
+    padding-inline: 1rem;
+    font-weight: var(--fw-medium);
+    text-transform: capitalize;
+}
+
+.app__searchResultSection__mealDisplayGrid__mealCard__recipeBtn {
+    width: 10.5rem;
+    margin-inline: auto;
+    margin-block: 0.5rem;
+    font-size: var(--fs-sm);
+    background: hsl(var(--color-theme));
+    padding-block: 0.75em;
+    padding-inline: 1.5em;
+    color: hsl(var(--color-white));
+    border-radius: 2em;
+    transition: background 200ms linear;
+}
+
+.app__searchResultSection__mealDisplayGrid__mealCard__recipeBtn:hover {
+    background: hsl(var(--color-theme-dark));
+    transition: background 200ms linear;
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="Find Your Meals"
+            content="LYNC NFT Deployer allows anyone to launch their NFT Collection on any chain."
+        />
+        <meta
+            name="description"
+            content="Discover your perfect meals in seconds with Find Your Meal - Fast and many"
+        />
+        <meta name="keywords" content="meal, recipe, ingredients" />
+        <meta name="author" content="Kashyap" />
+        <meta
+            property="og:title"
+            content="Discover your perfect meals in seconds with Find Your Meal - Fast and many"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />
+
+        <!-- Favicons -->
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/public/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/public/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/public/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/public/site.webmanifest" />
+
+        <!-- Fonts Preconnect -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- CSS Links -->
+        <link rel="stylesheet" href="../src/styles/Resets.css" />
+        <link rel="stylesheet" href="../src/styles/Homepage.css" />
+        <link rel="stylesheet" href="../src/styles/Overlay.css" />
+        <link rel="stylesheet" href="../src/styles/Loaders.css" />
+
+        <!-- Font-awesome CDN -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+
+        <!-- Page Title -->
+        <title>Find Your Meals</title>
+    </head>
+    <body>
+        <div class="app">
+            <section class="app__headingSection">
+                <h1 class="app__headingSection__heading">
+                    Find Meals For Your Ingredients
+                </h1>
+                <blockquote class="app__headingSection__quote">
+                    "Real food doesn't have ingredients, real food is
+                    ingredients." <br />
+                    <cite>- Jamie Oliver</cite>
+                </blockquote>
+            </section>
+            <form data-id="searchForm" class="app__searchMealForm">
+                <input
+                    data-id="searchInput"
+                    type="search"
+                    name="mealName"
+                    id="mealName"
+                    class="app__searchMealForm__searchInput"
+                    placeholder="Enter an Ingredient..."
+                />
+                <button type="submit" class="app__searchMealForm__submitBtn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+            <section class="app__searchResultSection">
+                <h2 class="app__searchResultSection__sectionHeading">
+                    Your Search Results:
+                </h2>
+                <div
+                    data-id="mealDisplayGrid"
+                    class="app__searchResultSection__mealDisplayGrid"
+                >
+                    <div
+                        class="app__searchResultSection__mealDisplayGrid__initialBanner"
+                    >
+                        <span
+                            class="app__searchResultSection__mealDisplayGrid__initialBanner__bannerImg"
+                        >
+                            <img src="./Meal.png" alt="meal" />
+                        </span>
+                        <span
+                            class="app__searchResultSection__mealDisplayGrid__initialBanner__mainMsg"
+                        >
+                            Search Meals for Your Ingredient...
+                        </span>
+                    </div>
+                </div>
+            </section>
+            <div
+                data-id="recipeModalOverlay"
+                class="app__recipeModalOverlay hidden"
+            ></div>
+        </div>
+
+        <!-- External Script Linking -->
+        <script type="module" src="../src/scripts/_App.js"></script>
+    </body>
+</html>

@@ -1,0 +1,133 @@
+.app__recipeModalOverlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100dvh;
+    background: hsl(var(--color-black) / 0.5);
+    z-index: 10;
+    display: grid;
+    place-items: center;
+}
+
+.app__recipeModalOverlay.hidden {
+    clip: rect(0, 0, 0, 0);
+    display: none;
+    overflow: hidden;
+}
+
+.app__recipeModalOverlay__recipeDetailsContainer {
+    background: hsl(var(--color-theme));
+    color: hsl(var(--color-white));
+    width: min(90%, 45em);
+    height: calc(100dvh - 6rem);
+    padding: 2.5rem;
+    padding-block-start: 0;
+    border-radius: 1.5em;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: 0;
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 250ms linear;
+}
+
+.app__recipeModalOverlay__recipeDetailsContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.app__recipeModalOverlay__recipeDetailsContainer__modalCloseBtn {
+    position: sticky;
+    top: 1.5rem;
+    margin-block-start: 1.5rem;
+    margin-inline-start: auto;
+    color: hsl(var(--color-white));
+    font-size: var(--fs-2xl);
+    border-radius: 50%;
+    transform: translateX(1rem);
+}
+
+.app__recipeModalOverlay__recipeDetailsContainer__recipeHeadings {
+    margin-block-start: 1rem;
+    margin-block-end: 3rem;
+    display: grid;
+    place-items: center;
+    gap: 0.6rem;
+}
+
+.app__recipeModalOverlay__recipeDetailsContainer__recipeHeadings__mealTitle {
+    max-width: 30ch;
+    line-height: 1.2;
+    font-size: var(--fs-2xl);
+    font-weight: var(--fw-semibold);
+    text-transform: capitalize;
+}
+
+.app__recipeModalOverlay__recipeDetailsContainer__recipeHeadings__mealCategory {
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-medium);
+    background: hsl(var(--color-white));
+    padding-block: 0.5em;
+    padding-inline: 0.75em;
+    color: hsl(var(--color-theme));
+    border-radius: 4px;
+}
+
+.app__recipeModalOverlay__recipeDetailsContainer__mealInstructionDetails {
+    display: grid;
+    place-items: center;
+    gap: 0.8rem;
+}
+
+.app__recipeModalOverlay__recipeDetailsContainer__mealInstructionDetails__instructionTitle {
+    font-size: var(--fs-xl);
+    border-bottom: 1px solid hsl(var(--color-white));
+}
+
+.app__recipeModalOverlay__recipeDetailsContainer__mealInstructionDetails__instruction {
+    padding-inline-end: 1rem;
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-light);
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.app__recipeModalOverlay__recipeDetailsContainer__recipeFooter {
+    margin-block-start: 2.5rem;
+    margin-block-end: 1rem;
+    display: grid;
+    place-items: center;
+    gap: 0.8rem;
+}
+
+.app__recipeModalOverlay__recipeDetailsContainer__recipeFooter__recipeImg {
+    aspect-ratio: 1;
+    width: 6rem;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+
+.app__recipeModalOverlay__recipeDetailsContainer__recipeFooter__recipeImg img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-position: top;
+}
+
+.app__recipeModalOverlay__recipeDetailsContainer__recipeFooter__recipeVideo {
+    font-size: var(--fs-4xl);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0.75;
+        transform: translateY(-25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
