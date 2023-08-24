@@ -21,7 +21,7 @@ export const noMealsContentHTML = `
 `;
 
 export const getMealCardContentHTML = (mealId, mealThumbnail, mealName) => {
-    const html = `
+  const html = `
         <div class="app__searchResultSection__mealDisplayGrid__mealCard">
             <span class="app__searchResultSection__mealDisplayGrid__mealCard__mealImg">
                 <img src="${mealThumbnail}" alt="${mealName}" />
@@ -33,18 +33,22 @@ export const getMealCardContentHTML = (mealId, mealThumbnail, mealName) => {
         </div>
     `;
 
-    return html;
+  return html;
 };
 
 export const getRecipeContentHTML = (__recipe) => {
-    const html = `
+  const html = `
         <div class="app__recipeModalOverlay__recipeDetailsContainer">
             <button data-id="modalCloseBtn" class="app__recipeModalOverlay__recipeDetailsContainer__modalCloseBtn">
                 <i class="fa-sharp fa-solid fa-circle-xmark"></i>
             </button>
             <div class="app__recipeModalOverlay__recipeDetailsContainer__recipeHeadings">
-                <span class="app__recipeModalOverlay__recipeDetailsContainer__recipeHeadings__mealTitle">${__recipe.strMeal}</span>
-                <span class="app__recipeModalOverlay__recipeDetailsContainer__recipeHeadings__mealCategory">#${__recipe.strCategory}</span>
+                <span class="app__recipeModalOverlay__recipeDetailsContainer__recipeHeadings__mealTitle">${
+                  __recipe.strMeal
+                }</span>
+                <span class="app__recipeModalOverlay__recipeDetailsContainer__recipeHeadings__mealCategory">#${
+                  __recipe.strCategory
+                }</span>
             </div>
             <div class="app__recipeModalOverlay__recipeDetailsContainer__mealInstructionDetails">
                 <span class="app__recipeModalOverlay__recipeDetailsContainer__mealInstructionDetails__instructionTitle">Instructions</span>
@@ -56,17 +60,21 @@ export const getRecipeContentHTML = (__recipe) => {
                 <span class="app__recipeModalOverlay__recipeDetailsContainer__recipeFooter__recipeImg">
                     <img src="${__recipe.strMealThumb}" alt="${__recipe.strMeal}" />
                 </span>
-                <a
-                    href="${__recipe.strYoutube}"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="app__recipeModalOverlay__recipeDetailsContainer__recipeFooter__recipeVideo"
-                >
-                    <i class="fa-brands fa-youtube"></i>
-                </a>
+                ${
+                  __recipe.strYoutube
+                    ? `<a
+                            href="${__recipe.strYoutube}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="app__recipeModalOverlay__recipeDetailsContainer__recipeFooter__recipeVideo"
+                        >
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>`
+                    : ""
+                }
             </div>
         </div>
     `;
 
-    return html;
+  return html;
 };
