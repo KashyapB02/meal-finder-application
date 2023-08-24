@@ -1,7 +1,7 @@
 export const initialMealsBanner = `
     <div class="app__searchResultSection__mealDisplayGrid__initialBanner">
         <span class="app__searchResultSection__mealDisplayGrid__initialBanner__bannerImg">
-            <img src="./Meal.png" alt="meal" />
+            <img src="/public/Meal.png" alt="meal" />
         </span>
         <span class="app__searchResultSection__mealDisplayGrid__initialBanner__mainMsg">Search Meals for Your Ingredient...</span>
     </div>
@@ -10,7 +10,7 @@ export const initialMealsBanner = `
 export const noMealsContentHTML = `
     <div class="app__searchResultSection__mealDisplayGrid__noResultContainer">
         <span class="app__searchResultSection__mealDisplayGrid__noResultContainer__noResultImg">
-            <img src="./NoResults.png" alt="not-found" />
+            <img src="/public/NoResults.png" alt="not-found" />
         </span>
         <span class="app__searchResultSection__mealDisplayGrid__noResultContainer__mainMsg">Sorry! No Result Found : (</span>
         <span class="app__searchResultSection__mealDisplayGrid__noResultContainer__subMsg">
